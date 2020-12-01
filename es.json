@@ -1,0 +1,11 @@
+{
+  "esHosts": "localhost:9200",
+  "esUser": "elastic",
+  "esPassword": "changeme",
+  //  "esEnableSSL": true,
+  //  "esAllowSelfSigned": true,
+  //  "esKeystorePath": "/path/to/.jks",
+  //  "esKeystorePassword": "password",
+  //  "esTruststorePath": "",
+  //  "esTruststorePassword": ""
+}

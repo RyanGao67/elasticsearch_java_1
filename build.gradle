@@ -1,0 +1,32 @@
+plugins {
+        id 'com.github.johnrengelman.shadow' version '6.1.0'
+        id 'java'
+        id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '2.0.0-alpha1'
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-to-slf4j
+    compile group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: '2.14.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.0-rc2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+    compile group: 'org.elasticsearch', name: 'elasticsearch', version: '7.10.0'
+    compile group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '7.10.0'
+
+}
+
+mainClassName = 'com.example'
+
+jar {
+    manifest {
+        attributes "Main-Class":"$mainClassName"
+    }
+}
